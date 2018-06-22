@@ -1,81 +1,145 @@
-<! DOCTYPE html>
-<html>
-<header>
-  <title> MuhinyuziJC</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="styles.css">
-  </header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RwandaMuscle&Fitness</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" type="text/css" href="final.css">
+  </head>
   <body>
-<div class="top">
-  <ul>
-    <li> <a> HOME </a></li>
-    <li><a> TRAINERS </a>
-    <ul>
-      <li><a>The Rock </a><li>
-        <li><a>Norbert </a><li>
-    </ul>
-    </li>
-    <li><a> GYMS </a>
-      <ul>
-    <li><a>Cali Fitness </a><li>
-      <li><a>Waka Gym </a><li>
-        <li><a>Be Fit </a><li>
+
+    <header class="header">
+      <div class="header__inner">
+        <img class="header__logo" src="images/muscle-fitness.svg" alt="iconic view of a cityscape">
+        <h1 class="header__title">
+          RwandanMuscle&Fitness
+        </h1>
+        <a id="menu" class="header__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <nav id="drawer" class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">HOME</a></li>
+        <li class="nav__item"><a href="#">NEWS</a></li>
+        <li class="nav__item"><a href="#">GYMS</a></li>
+        <li class="nav__item"><a href="#">TRAINERS</a></li>
+        <li class="nav__item"><a href="#">NUTRITION</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="content">
+        <section class="hero">
+          <article class="description">
+            <h2><a href="#" class="top-article">Arm Workout!</a></h2>
+            <p><a href="#" class="top-article">Tips on how you can develop your triceps without spending many hours in the Gym.</a></p>
+          </article>
+        </section>
+
+        <section class="news top-news">
+          <h2 class="news__title">Top article <a href="#" class="news__more">+ more</a></h2>
+          <ul>
+            <li class="top-news__item">
+              <a href="#">Trainer Norbert explains how to start your own gym.</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">How to Increase your one rep max on bench press.</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">Eat right to get the body that you dream of.</a>
+            </li>
+            <li class="top-news__item">
+              <a href="#">6 Things Fit Guys Should Know In July 2018.</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="scores">
+          <figure>
+          <img src="images/score.jpg" class="score-image" alt="sergent">
+          <figcaption> The sergent in the Gym</figcaption>
+          </figure>
+        </section>
+
+        <section class="motivation">
+          <article>
+          <h2 class="motivation-title">MOTIVATION</h2>
+          <h3><a class="motivation-title" href="#">12 Weeks body Transformation</a></h3>
+          <p><a class="motivation-title" href="#"> It is amazing to see how Norbert managed to shrink all his belly fat in just 12 Weeks!!!!</a></p>
+        </article>
+        </section>
+
+        <section class="news recent-news">
+          <h2 class="news__title">Latest articles <a href="#" class="news__more">+ more</a></h2>
+          <ul>
+            <li class="snippet">
+              <h3 class="snippet__title"><a href="#">Trainer Norbert explains how to start your own gym</a></h3>
+              <div class="snippet__thumbnail">
+                <img src='images/Soon.jpg' alt="picture of Norbert">
+              </div>
+              <p class="snippet__description">Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym
+              </p>
+            </li>
+            <li class="snippet">
+              <div class="snippet__thumbnail">
+                <img src='images/Claude.jpg' alt="picture of The Rock">
+              </div>
+              <h3 class="snippet__title"><a href="#">How to Increase your one rep max on bench press.</a></h3>
+              <p class="snippet__description">Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
+              </p>
+            </li>
+            <li class="snippet">
+              <div class="snippet__thumbnail">
+                <img src='images/diet.jpg' alt="picture of a girl with a large, stuffed dog toy">
+              </div>
+              <h3 class="snippet__title"><a href="#">Eat right to get the body that you dream of.</a></h3>
+              <p class="snippet__description">Tips from our Nutritionist
+              </p>
+            </li>
+            <li class="snippet">
+              <div class="snippet__thumbnail">
+                <img src='images/califit.png' class="cali" alt="picture of a girl with a large, stuffed dog toy">
+              </div>
+              <h3 class="snippet__title"><a href="#">6 Things Fit Guys Should Know In July 2018. </a></h3>
+              <p class="snippet__description">Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <footer>
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Follow us on Twitter</a></li>
+          <li><a href="#">RSS</a></li>
         </ul>
-          </li>
-          <li><a>NUTRITION</a></li>
-    <li><a> GALLERY </a></li>
-    <li><a> EVENTS</a>
-<ul>
-<li><a>Boot Camp </a><li>
-  <li><a> Competions </a><li>
-    <li><a> Running </a><li>
-</ul>
-    </li>
-</ul>
-<p class="muscle"> RwandanMuscle&Fitness</p>
-  <p class="f"> "train the body and the mind will follow" </p>
-</div>
-<div class="double">
-<div class="content">
-  <h4>#Athlete of the week#</h4>
-  <h3>Who is Muhinyuzi JC commonly known as The Rock?</h3>
-  <p> "MJC a.k.a The Rock is the man who created this Website in order bring his contribution
-    in the entertainment of the Rwandan Bodybuilding and fitness in general.
-    He has been doing Bodybuilding since the year 2006 and his one of the big figures in the game"</p>
-<img class="pic" src="/Users/The Rock/desktop/RG/Me.jpg" alt="Me">
+      </footer>
+    </main>
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
 
-</div>
-<div class="coach">
-  <h5>Do you want to build a bigger chest?</h5>
-  <p> Here are some tips from our trainer for getting your chest even bigger than you can imagine</p>
-  <img src="/Users/The Rock/desktop/Chul-Soon.jpg" alt="Chul-Soon" class="picture">
-</div>
-</div>
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
 
-<div class="details">
-<h1> Train Hard or go Home </h1>
-<p class="k"> “Get in the gym, find your focus,
-  take a deep breath and go beast mode.
-  ” Making gains and becoming better – regardless of what your goals are – comes down to this.
-  To get in the gym, to remove everything
-  in your mind and focus on the task at..TTTTTTTTTTTTTTTTTTTTTTT</p>
-  <h2> Exercises</h2>
-  <ol>
-    <li>Chest</li>
-    <li>Back</li>
-    <li>Arms</li>
-    <li>Legs</li>
-    <li>Abs</li>
-
-  </ol>
-
-</div>
-
-
-
+    </script>
   </body>
-
-
-
-
 </html>

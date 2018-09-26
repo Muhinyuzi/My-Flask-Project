@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RwandaMuscle&Fitness</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="responsive.css">
-    <link rel="stylesheet" type="text/css" href="final.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='final.css')}}">
   </head>
   <body>
 
     <header class="header">
       <div class="header__inner">
-        <img class="header__logo" src="images/muscle-fitness.svg" alt="iconic view of a cityscape">
+        <img class="header__logo" src="{{url_for('static', filename='logo1.PNG')}}" alt="MuscleandFitness image">
         <h1 class="header__title">
-          RwandanMuscle&Fitness
+          𝓡𝔀𝓪𝓷𝓭𝓪𝓕𝓲𝓽𝓷𝓮𝓼𝓼.𝓬𝓸𝓶
         </h1>
         <a id="menu" class="header__menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -28,11 +28,48 @@
 
     <nav id="drawer" class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#">HOME</a></li>
-        <li class="nav__item"><a href="#">NEWS</a></li>
-        <li class="nav__item"><a href="#">GYMS</a></li>
-        <li class="nav__item"><a href="#">TRAINERS</a></li>
-        <li class="nav__item"><a href="#">NUTRITION</a></li>
+        <li class="nav__item"><button class="dropbtn">ARTICLES</button>
+           <li> <a href="#">Top Stories</a></li>
+           <li> <a href="#">Second Story</a></li>
+           <li> <a href="#">Motivation Story</a></li>
+        </li>
+        <li class="nav__item"><button class="dropbtn">FEATURES</button>
+           <li> <a href="#">GYMS</a></li>
+           <li> <a href="#">TRAINERS</a></li>
+           <li> <a href="#">SPORT CENTERS</a></li>
+           <li> <a href="#">SHOPS</a></li>
+           <li> <a href="#">STORE</a></li>
+           <li> <a href="#">XX</a></li>
+        </li>
+
+        <li class="nav__item"><button class="dropbtn">NUTRITION</button>
+           <li> <a href="#">Healthy recipes</a></li>
+           <li> <a href="#">Meal plan</a></li>
+           <li> <a href="#">Lose fat</a></li>
+           <li> <a href="#">Gain Mass</a></li>
+           <li> <a href="#">Supplements</a></li>
+           <li> <a href="#">XX</a></li>
+        </li>
+
+        <li class="nav__item"><button class="dropbtn">EVENTS</button>
+           <li> <a href="#">Event1</a></li>
+           <li> <a href="#">Event1</a></li>
+           <li> <a href="#">Event1</a></li>
+           <li> <a href="#">Event1</a></li>
+           <li> <a href="#">Event1</a></li>
+           <li> <a href="#">Event1</a></li>
+        </li>
+
+
+        <li class="nav__item"><button class="dropbtn">ATHLETES&CELEBRITIES</button>
+           <li> <a href="#">News</a></li>
+           <li> <a href="#">Interviews</a></li>
+           <li> <a href="#">Girls</a></li>
+           <li> <a href="#">Videos</a></li>
+           <li> <a href="#">Hot pics</a></li>
+           <li> <a href="#">XX</a></li>
+
+        </li>
       </ul>
     </nav>
 
@@ -65,13 +102,13 @@
 
         <section class="scores">
           <figure>
-          <img src="images/score.jpg" class="score-image" alt="sergent">
+          <img src="{{url_for('static', filename='score.jpg')}}" class="score-image" alt="sergent">
           <figcaption> The sergent in the Gym</figcaption>
           </figure>
         </section>
 
         <section class="motivation">
-          <article>
+          <article class="description">
           <h2 class="motivation-title">MOTIVATION</h2>
           <h3><a class="motivation-title" href="#">12 Weeks body Transformation</a></h3>
           <p><a class="motivation-title" href="#"> It is amazing to see how Norbert managed to shrink all his belly fat in just 12 Weeks!!!!</a></p>
@@ -84,22 +121,22 @@
             <li class="snippet">
               <h3 class="snippet__title"><a href="#">Trainer Norbert explains how to start your own gym</a></h3>
               <div class="snippet__thumbnail">
-                <img src='images/Soon.jpg' alt="picture of Norbert">
+                <img src="{{url_for('static', filename='soon.jpg')}}" alt="picture of Norbert">
               </div>
               <p class="snippet__description">Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym.Trainer Norbert explains how to start your own gym
               </p>
             </li>
             <li class="snippet">
               <div class="snippet__thumbnail">
-                <img src='images/Claude.jpg' alt="picture of The Rock">
+                <img src="{{url_for('static', filename='Claude.jpg')}}" alt="picture of The Rock">
               </div>
               <h3 class="snippet__title"><a href="#">How to Increase your one rep max on bench press.</a></h3>
-              <p class="snippet__description">Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
+              <p class="snippet__description">Tips from The Rock on how you can increase your one rep max on bench press.Tips from The Rock on how you can increase your one rep max on bench press.Tips from The Rock on how you can increase your one rep max on bench press.Tips from The Rock on how you can increase your one rep max on bench press.Tips from The Rock on how you can increase your one rep max on bench press.
               </p>
             </li>
             <li class="snippet">
               <div class="snippet__thumbnail">
-                <img src='images/diet.jpg' alt="picture of a girl with a large, stuffed dog toy">
+                <img src="{{url_for('static', filename='diet.jpg')}}" alt="picture of a girl with a large, stuffed dog toy">
               </div>
               <h3 class="snippet__title"><a href="#">Eat right to get the body that you dream of.</a></h3>
               <p class="snippet__description">Tips from our Nutritionist
@@ -107,7 +144,7 @@
             </li>
             <li class="snippet">
               <div class="snippet__thumbnail">
-                <img src='images/califit.png' class="cali" alt="picture of a girl with a large, stuffed dog toy">
+                <img src="{{url_for('static', filename='califit.png')}}" class="cali" alt="picture of a girl with a large, stuffed dog toy">
               </div>
               <h3 class="snippet__title"><a href="#">6 Things Fit Guys Should Know In July 2018. </a></h3>
               <p class="snippet__description">Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves, Build Killer Pecs In Just 3 Moves

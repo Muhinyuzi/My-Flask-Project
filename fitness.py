@@ -1,9 +1,13 @@
-from flask import Flask, render_template, request, redirect, jsonify, url_for
+from flask import Flask, render_template, request, redirect, jsonify, url_for, send_from_directory
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database import Base, Trainer, TrainerProfile
+import os
+
+PEOPLE_FOLDER = os.path.join('static', 'people_photo')
 
 app = Flask(__name__)
+
 
 engine = create_engine('sqlite:///trainers.db')
 Base.metadata.bind = engine
@@ -151,6 +155,11 @@ def events4():
 
     return render_template('event4.html')
 
+@app.route('/home/gallery', methods=['GET', 'POST'])
+def get_gallery():
+    image_names = os.listdir('./images')
+    print(image_names)
+    return render_template("gallery.html", image_names=image_names) 
 
 if __name__ == '__main__':
     app.debug = True

@@ -1,16 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<header>
-  <title>RWANDAFITNESS.com</title>
+<html>
+
+<head>
+<title>RWANDAFITNESS.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap4.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
-</header>
+
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+
+</head>
+
+
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -49,8 +91,16 @@
             </ul>
           </div>
         </li>
-
-
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EVENTS</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+            <ul class="menu-list">
+              <li><a class="dropdown-item" href="#">Event1</a></li>
+              <li><a class="dropdown-item" href="#">Event2</a></li>
+              <li><a class="dropdown-item" href="#">Event3</a></li>
+            </ul>
+          </div>
+        </li>
         <li class="nav-item dropdown" aria-labelledby="navbarDropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NUTRITION</a>
          <div class="dropdown-menu"> 
@@ -64,24 +114,38 @@
          </div>
         </li>
        </ul>
-
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
     </div>
   </div>
 </nav>
-   <div class="row" style="margin-top: 100px">
+	<body>
+		<div class = 'pane' style="margin-top: 200px">
+		<h1>{{ trainer.name }}</h1>
+		{% block content %}
 
-    
 
 
-          {% for image_name in image_names %}
-        <div class="text-center">
-            <img class="rounded float-left" src=" {{url_for('send_image', filename=image_name)}}" style="width: 500px; height: 400px;">
+  <div class="card">
+  <img src="{{url_for('static', filename='butt.jpg')}}" alt="John" style="width:100%">
+  <h1>{{ trainer.name }}</h1>
+  <p class="title">Personal Trainer</p>
+  <p>Harvard University</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a> 
+  <a href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-linkedin"></i></a> 
+  <a href="#"><i class="fa fa-facebook"></i></a> 
+  <p><button>Contact</button></p>
+</div>
+
+        {% endblock %}
+		
+
         </div>
-          {% endfor %}
-    
-   </div>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
 
-</body>
 </html>

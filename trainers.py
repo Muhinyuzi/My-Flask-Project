@@ -43,7 +43,7 @@ session.add(trainer2)
 session.commit()
 
 
-TrainerProfile1 = TrainerProfile(name = "Norbert", description = "With your choice of noodles vegetables and sauces", price = "$7.99", course = "Entree", trainer = trainer2)
+TrainerProfile2 = TrainerProfile(name = "Norbert", description = "With your choice of noodles vegetables and sauces", price = "$7.99", course = "Entree", trainer = trainer2)
 
 session.add(trainerProfile1)
 session.commit()

@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect, jsonify, url_for, send_from_directory
+from flask import Flask, render_template, request, redirect, jsonify, url_for, send_from_directory, json
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database import Base, Trainer, TrainerProfile
 import os
 
-PEOPLE_FOLDER = os.path.join('static', 'people_photo')
+
 
 app = Flask(__name__)
 
@@ -110,6 +110,14 @@ def showTrainers():
     # return "This page will show all my restaurants"
     return render_template('trainers.html', trainers=trainers)
 
+@app.route('/trainer/<int:trainer_id>/')
+@app.route('/trainer/<int:trainer_id>/profile/')
+def showTrainerProfile(trainer_id):
+    trainer = session.query(Trainer).filter_by(id=trainer_id).one()
+    items = session.query(TrainerProfile).filter_by(
+        trainer_id=trainer_id).all()
+    return render_template('trainer.html', items=items, trainer=trainer)   
+
  
 
 @app.route('/home/features/sportcenters')
@@ -155,11 +163,18 @@ def events4():
 
     return render_template('event4.html')
 
-@app.route('/home/gallery', methods=['GET', 'POST'])
+
+
+
+gallery_JSON = open("gallery_json.js").read()
+
+@app.route('/home/gallery')
 def get_gallery():
-    image_names = os.listdir('./images')
-    print(image_names)
-    return render_template("gallery.html", image_names=image_names) 
+    return render_template('gallery1.html')
+
+@app.route('/gallery_json')
+def gallery_json():
+    return json.dumps(gallery_JSON)
 
 if __name__ == '__main__':
     app.debug = True

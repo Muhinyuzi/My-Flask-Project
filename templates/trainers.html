@@ -83,20 +83,20 @@
     </div>
   </div>
 </nav>
-<div class = 'pane' style="margin-top: 200px;">
+<div class = "pane" style="margin-top: 200px; margin-right:100px; margin-left: 200px;">
 <h1>Trainers</h1>
 
-<a href="{{url_for('events2')}}" > <h3> Register as a Trainer </h3> </a>
+
 
 {% for trainer in trainers %}
 
 
 
-<a href = "{{url_for('events2', trainer_id = trainer.id)}}"> <p>{{trainer.name}}</p></a>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success"><p>{{trainer.name}}</p></li>
+  <li class="list-group-item list-group-item-info"><p><a href="{{url_for('showTrainerProfile',trainer_id = trainer.id)}}">Trainer's Profile</a></p></li>
 
-<p><a href = "{{url_for('events2',trainer_id = trainer.id)}}">Edit Trainer</a></p>
-
-<p> <a href = "{{url_for('events2',trainer_id = trainer.id)}}">Delete Trainer</a> </p>
+</ul>
 
 
 

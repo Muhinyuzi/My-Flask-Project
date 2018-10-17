@@ -28,11 +28,9 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ARTICLES</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <ul class="menu-list">
-             <li><a class="dropdown-item" href='{{ url_for('articlesTop') }}'>Top Story</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('story2') }}'>Article1</a></li>
+             <li><a class="dropdown-item" href='{{ url_for('articlesTop') }}'>Workouts</a></li>
              <li><a class="dropdown-item" href='{{ url_for('motivation') }}'>Motivation</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('articlesTop') }}'>Article3</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('articlesTop') }}'>Article4</a></li>
+             <li><a class="dropdown-item" href='{{ url_for('articlesTop') }}'>Nutrition</a></li>
             </ul>
           </div>
         </li>
@@ -41,11 +39,9 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FEATURES</a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
            <ul class="menu-list">
-             <li><a class="dropdown-item" href='{{ url_for('showGyms') }}'>GYMS</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('showTrainers') }}'>TRAINERS</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('showSportCenters') }}'>SPORT CENTERS</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('showShops') }}'>SHOPS</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('store') }}'>STORE</a></li>
+             <li><a class="dropdown-item" href='{{ url_for('showGyms') }}'>Gyms</a></li>
+             <li><a class="dropdown-item" href='{{ url_for('showTrainers') }}'>Trainers</a></li>
+             <li><a class="dropdown-item" href='{{ url_for('showShops') }}'>Shops</a></li>
            </ul>
          </div>
         </li>
@@ -60,32 +56,13 @@
             </ul>
           </div>
         </li>
+        
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EVENTS</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-            <ul class="menu-list">
-              <li><a class="dropdown-item" href='{{ url_for('events1') }}'>Event1</a></li>
-              <li><a class="dropdown-item" href='{{ url_for('events2') }}'>Event2</a></li>
-              <li><a class="dropdown-item" href='{{ url_for('events3') }}'>Event3</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item dropdown" aria-labelledby="navbarDropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role "button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NUTRITION</a>
-         <div class="dropdown-menu"> 
-           <ul class="menu-list">
-             <li><a class="dropdown-item" href='{{ url_for('healthyRecipes') }}'>Healthy recipes</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('mealplan') }}'>Meal Plan</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('loseFat') }}'>Lose Fat</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('gainMass') }}'>Gain Mass</a></li>
-             <li><a class="dropdown-item" href='{{ url_for('supplement') }}'>Supplemets</a></li>
-           </ul>
-         </div>
+          <a href='{{ url_for('get_gallery') }}'>GALLERY</a>
+
         </li>
        </ul>
-      <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+      
     </div>
   </div>
 </nav>
@@ -153,7 +130,7 @@
             </div>
            </div>
  
-      <h1>Welcome to the Rwandan Fitness World</h1>
+      <h1>Welcome to the Rwanda Fitness Website</h1>
       <p>The Fitness industry is growing day after day in Rwanda. Visit our website to get more information on any question you have about this industry, meet the nutrition experts, meet the best trainers , get any advice you need to success in your workouts, check the best gyms in the hole country, upcoming events in the world of Fitness, check and buy the training clotches that fit you.. check and buy all types of supplements you can get to get the results that you dream of...... “We are going to change the way people think about fitness.”</p>
 
 
